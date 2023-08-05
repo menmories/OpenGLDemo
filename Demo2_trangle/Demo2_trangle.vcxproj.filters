@@ -27,6 +27,18 @@
     <ClCompile Include="glad\glad.c">
       <Filter>源文件\glad</Filter>
     </ClCompile>
+    <ClCompile Include="OpenGLVertexShader.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenGLFragmentShader.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="COpenGLShader.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="COpenGLShaderProgram.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="glad\glad.h">
@@ -34,6 +46,18 @@
     </ClInclude>
     <ClInclude Include="glad\khrplatform.h">
       <Filter>头文件\glad</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGLVertexShader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGLFragmentShader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="COpenGLShader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="COpenGLShaderProgram.h">
+      <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

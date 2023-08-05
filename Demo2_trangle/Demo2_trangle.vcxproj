@@ -140,12 +140,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="COpenGLShader.cpp" />
+    <ClCompile Include="COpenGLShaderProgram.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="glad\glad.c" />
+    <ClCompile Include="OpenGLFragmentShader.cpp" />
+    <ClCompile Include="OpenGLVertexShader.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="COpenGLShader.h" />
+    <ClInclude Include="COpenGLShaderProgram.h" />
     <ClInclude Include="glad\glad.h" />
     <ClInclude Include="glad\khrplatform.h" />
+    <ClInclude Include="OpenGLFragmentShader.h" />
+    <ClInclude Include="OpenGLVertexShader.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -39,6 +39,9 @@
     <ClCompile Include="COpenGLShaderProgram.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="COpenGLTexture.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="glad\glad.h">
@@ -57,6 +60,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="COpenGLShaderProgram.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stb_image.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="COpenGLTexture.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

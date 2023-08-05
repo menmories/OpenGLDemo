@@ -142,6 +142,7 @@
   <ItemGroup>
     <ClCompile Include="COpenGLShader.cpp" />
     <ClCompile Include="COpenGLShaderProgram.cpp" />
+    <ClCompile Include="COpenGLTexture.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="glad\glad.c" />
     <ClCompile Include="OpenGLFragmentShader.cpp" />
@@ -150,10 +151,12 @@
   <ItemGroup>
     <ClInclude Include="COpenGLShader.h" />
     <ClInclude Include="COpenGLShaderProgram.h" />
+    <ClInclude Include="COpenGLTexture.h" />
     <ClInclude Include="glad\glad.h" />
     <ClInclude Include="glad\khrplatform.h" />
     <ClInclude Include="OpenGLFragmentShader.h" />
     <ClInclude Include="OpenGLVertexShader.h" />
+    <ClInclude Include="stb_image.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -32,6 +32,6 @@
 *.app
 
 # custom ignore
-.vs/
+.vs
 Output/x64/Temp/*
 *.pdb

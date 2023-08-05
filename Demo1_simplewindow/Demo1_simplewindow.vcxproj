@@ -72,12 +72,12 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>$(SolutionDir)Output\x64\</OutDir>
-    <IntDir>$(SolutionDir)Output\x64\Temp\</IntDir>
+    <IntDir>$(SolutionDir)Output\x64\Temp\$(ProjectName)\</IntDir>
     <TargetName>$(ProjectName)_d</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>$(SolutionDir)Output\x64\</OutDir>
-    <IntDir>$(SolutionDir)Output\x64\Temp\</IntDir>
+    <IntDir>$(SolutionDir)Output\x64\Temp\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

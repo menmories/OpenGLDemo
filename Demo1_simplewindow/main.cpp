@@ -67,6 +67,11 @@ bool InitOgl()
 void OnRender()
 {
 	glClear(GL_COLOR_BUFFER_BIT);
+
+	glMatrixMode(GL_MODELVIEW);
+	glLoadIdentity();
+
+
 	SDL_GL_SwapWindow(window);
 }
 
@@ -87,8 +92,6 @@ void MessageLoop()
 			}
 			case SDL_WINDOWEVENT:
 			{
-				//窗口大小改变事件
-
 				break;
 			}
 			case SDL_KEYDOWN:

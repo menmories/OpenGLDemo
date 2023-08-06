@@ -22,6 +22,8 @@ public:
 	}
 
 	void GetShaderInfoLog(GLsizei bufSize, GLsizei* length, GLchar* infoLog);
+
+	static std::string LoadFromFile(const std::string& filename);
 private:
 	GLuint m_shader;
 };

@@ -11,6 +11,9 @@ public:
 	COpenGLTexture();
 	~COpenGLTexture();
 
+	bool LoadTexture(const std::string& filename);
+
+
 	inline GLuint GetTextureId()const
 	{
 		return m_textureId;
@@ -18,5 +21,8 @@ public:
 
 private:
 	GLuint m_textureId;
+	int m_width;
+	int m_height;
+	int m_comp;
 };
 

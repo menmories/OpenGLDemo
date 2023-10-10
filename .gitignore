@@ -35,3 +35,4 @@
 .vs
 Output/x64/Temp/*
 *.pdb
+*.ilk

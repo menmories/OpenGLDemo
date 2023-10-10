@@ -171,8 +171,19 @@ bool InitOgl();
 void OnRender();
 void OnResize(int width, int height);
 void MessageLoop();
+//开启控制台UTF-8编码
+void EnableUtf8CodePage()
+{
+	FILE* pFile = _popen("chcp 65001", "r");
+	if (!pFile)
+	{
+		return;
+	}
+	_pclose(pFile);
+}
 int main(int argc, char** argv)
 {
+	EnableUtf8CodePage();
 	int res = SDL_Init(SDL_INIT_VIDEO);
 	if (res != 0)
 	{
@@ -180,7 +191,7 @@ int main(int argc, char** argv)
 		return -1;
 	}
 	
-	window = SDL_CreateWindow(u8"OpenGL窗口", 130, 100, 1200, 760, 
+	window = SDL_CreateWindow("OpenGL窗口", 130, 100, 1200, 760, 
 		SDL_WINDOW_SHOWN | SDL_WINDOW_OPENGL | SDL_WINDOW_RESIZABLE);
 	if (!window)
 	{

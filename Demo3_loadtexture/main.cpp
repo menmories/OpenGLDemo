@@ -1,4 +1,4 @@
-﻿// Demo1_simplewindow.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
+// Demo1_simplewindow.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
 //
 
 
@@ -18,7 +18,7 @@
 #pragma comment(lib, "SDL2.lib")
 #pragma comment(lib, "SDL2main.lib")
 //#pragma comment(lib, "SDL2-static.lib")
-#pragma comment(lib, "SDL2_test.lib")
+#pragma comment(lib, "SDL2test.lib")
 
 class Render
 {
@@ -59,7 +59,7 @@ public:
 		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
 		glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
 
-		std::string strImage = "F:\\VSProject\\cpp\\OpenGLDemo\\Demo3_loadtexture\\104936448_柠檬master1200.jpg";
+		std::string strImage = "D:\\GitHub\\OpenGLDemo\\Output\\x64\\4234d5e279ff64c948af90bba5e2f203.jpg";
 		if (!m_texture.LoadTexture(strImage))
 		{
 			printf("LoadTexture failed!\n");
@@ -84,7 +84,7 @@ public:
 		//申请一个shader
 		//const char* vertexShaderSource = DEFAULT_VERTEXT_SHADER_STRING;
 
-		std::string shaderStr = COpenGLShader::LoadFromFile("F:\\VSProject\\cpp\\OpenGLDemo\\Demo3_loadtexture\\vertex.glsl");
+		std::string shaderStr = COpenGLShader::LoadFromFile("vertex.glsl");
 		const char* vertexShaderSource = shaderStr.c_str();
 		m_vertexShader.ShaderSource(1, (const char* const*) &vertexShaderSource, nullptr);
 		m_vertexShader.CompileShader();
@@ -96,7 +96,7 @@ public:
 			return;
 		}
 
-		shaderStr = COpenGLShader::LoadFromFile("F:\\VSProject\\cpp\\OpenGLDemo\\Demo3_loadtexture\\fragment.glsl");
+		shaderStr = COpenGLShader::LoadFromFile("fragment.glsl");
 		const char* fragmentShaderSouce = shaderStr.c_str();
 		m_fragShader.ShaderSource(1, &fragmentShaderSouce, nullptr);
 		m_fragShader.CompileShader();

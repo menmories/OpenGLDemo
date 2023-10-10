@@ -1,4 +1,4 @@
-﻿// Demo1_simplewindow.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
+// Demo1_simplewindow.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
 //
 
 #include <sdl2/SDL.h>
@@ -12,7 +12,7 @@
 #pragma comment(lib, "SDL2.lib")
 #pragma comment(lib, "SDL2main.lib")
 //#pragma comment(lib, "SDL2-static.lib")
-#pragma comment(lib, "SDL2_test.lib")
+#pragma comment(lib, "SDL2test.lib")
 
 SDL_Window* window = nullptr;
 SDL_GLContext context = nullptr;

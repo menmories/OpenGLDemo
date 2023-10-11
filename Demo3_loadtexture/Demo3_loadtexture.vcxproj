@@ -158,6 +158,10 @@
     <ClInclude Include="OpenGLVertexShader.h" />
     <ClInclude Include="stb_image.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="fragment.glsl" />
+    <None Include="vertex.glsl" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

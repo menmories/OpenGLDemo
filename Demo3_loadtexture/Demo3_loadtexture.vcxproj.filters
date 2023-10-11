@@ -69,4 +69,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="fragment.glsl">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="vertex.glsl">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
 </Project>

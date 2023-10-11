@@ -125,7 +125,7 @@ public:
 		* 最后一个参数的类型是GLvoid*，所以需要我们进行这个奇怪的强制类型转换。它表示位置数据在缓冲中起始位置的偏移量(Offset)。由于位置数据在数组的开头，所以这里是0。我们会在后面详细解释这个参数。
 		*/
 		//位置属性
-		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), (GLvoid*)0);
+		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(GLfloat), (GLvoid*)0);
 		glEnableVertexAttribArray(0);
 
 		//颜色属性
@@ -136,7 +136,7 @@ public:
 		glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(6 * sizeof(float)));
 		glEnableVertexAttribArray(2);
 
-		glUseProgram(m_shaderProgram.GetShaderProgramId());
+		
 
 		//设置为线框模式
 		//glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
@@ -149,7 +149,11 @@ public:
 		/*glDrawArrays(GL_TRIANGLES, 0, 3);
 		glBindVertexArray(0);*/
 		//glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
+		glUseProgram(m_shaderProgram.GetShaderProgramId());
 		glActiveTexture(GL_TEXTURE0);
+		glBindTexture(GL_TEXTURE_2D, m_texture.GetTextureId());
+
+		glBindVertexArray(VAO);
 		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 		//glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 	}

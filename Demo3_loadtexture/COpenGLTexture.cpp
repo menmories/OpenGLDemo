@@ -40,7 +40,7 @@ bool COpenGLTexture::LoadTexture(const std::string& filename)
 	}
 
 	glBindTexture(GL_TEXTURE_2D, m_textureId);
-	//ÉèÖÃtextureÊôÐÔ
+	//è®¾ç½®textureå±žæ€§
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);

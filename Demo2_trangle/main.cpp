@@ -1,5 +1,9 @@
-// Demo1_simplewindow.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
-//
+/*
+* learn opengl tutorial document.
+* 英文版：https://learnopengl.com
+* 中文版：https://learnopengl-cn.github.io/
+* 代码仓库：https://github.com/JoeyDeVries/LearnOpenGL
+*/
 
 #include <sdl2/SDL.h>
 #include "glad/khrplatform.h"

@@ -14,6 +14,10 @@
 #include "COpenGLShaderProgram.h"
 #include "COpenGLTexture.h"
 
+#include <glm/glm.hpp>
+#include <glm/ext.hpp>
+#include "glm/gtc/matrix_transform.hpp"
+
 #pragma comment(lib, "SDL2.lib")
 #pragma comment(lib, "SDL2main.lib")
 //#pragma comment(lib, "SDL2-static.lib")
@@ -166,7 +170,8 @@ private:
 	COpenGLShaderProgram m_shaderProgram;
 	COpenGLTexture m_texture;
 };
-
+int screen_width = 1200;
+int screen_height = 760;
 SDL_Window* window = nullptr;
 SDL_GLContext context = nullptr;
 Render* g_render = nullptr;
@@ -194,7 +199,7 @@ int main(int argc, char** argv)
 		return -1;
 	}
 	
-	window = SDL_CreateWindow("OpenGL窗口", 130, 100, 1200, 760, 
+	window = SDL_CreateWindow("Simple2D", 130, 100, screen_width, screen_height, 
 		SDL_WINDOW_SHOWN | SDL_WINDOW_OPENGL | SDL_WINDOW_RESIZABLE);
 	if (!window)
 	{
@@ -226,6 +231,8 @@ bool InitOgl()
 		return false;
 	}
 	g_render = new Render();
+	//glOrtho(-1, 1200, 760, -1, 0, 0);
+	glm::ortho(0.0f, (float)screen_width, 0.0f, (float)screen_height, 0.1f, 100.0f);
 	glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 	return true;
 }
@@ -239,6 +246,8 @@ void OnRender()
 
 void OnResize(int width, int height)
 {
+	screen_width = width;
+	screen_height = height;
 	glViewport(0, 0, width, height);
 }
 

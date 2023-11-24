@@ -218,6 +218,10 @@ bool InitOgl()
 	
 	//glOrtho(-1, 1200, 760, -1, 0, 0);
 	//glm::ortho(0.0f, (float)screen_width, 0.0f, (float)screen_height, 0.1f, 100.0f);
+	
+	//glm::vec2 begin, end;
+	
+	//glm::vec2 pos = glm::lerp(begin, end, 0.5f);
 	glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 	return true;
 }
@@ -227,6 +231,11 @@ void OnResize(int width, int height)
 	screen_width = width;
 	screen_height = height;
 	glViewport(0, 0, width, height);
+	//glm::mat4 projection = glm::ortho(0.0f, (float)width, (float)height, 0.0f, -1.0f, 1.0f);
+	glMatrixMode(GL_PROJECTION);
+	glLoadIdentity();
+	glOrtho(0.0f, (float)width, (float)height, 0.0f, -1.0f, 1.0f);
+	glMatrixMode(GL_MODELVIEW);
 }
 
 /*void MessageLoop()

@@ -61,7 +61,8 @@ public:
 		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
 		glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
 
-		std::string strImage = "D:\\GitHub\\OpenGLDemo\\Output\\x64\\4234d5e279ff64c948af90bba5e2f203.jpg";
+		//std::string strImage = "D:\\GitHub\\OpenGLDemo\\Output\\x64\\4234d5e279ff64c948af90bba5e2f203.jpg";
+		std::string strImage = "104936448_柠檬master1200.jpg";
 		if (!m_texture.LoadTexture(strImage))
 		{
 			printf("LoadTexture failed!\n");

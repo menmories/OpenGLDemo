@@ -15,7 +15,7 @@ COpenGLTexture::~COpenGLTexture()
 
 bool COpenGLTexture::LoadTexture(const std::string& filename)
 {
-	stbi_uc* data = stbi_load(filename.c_str(), &m_width, &m_height, &m_comp, 4);
+	stbi_uc* data = stbi_load(filename.c_str(), &m_width, &m_height, &m_comp, 0);
 	if (!data)
 	{
 		return false;

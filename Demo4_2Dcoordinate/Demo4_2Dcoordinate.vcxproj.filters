@@ -39,7 +39,7 @@
     <ClCompile Include="COpenGLShaderProgram.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="COpenGLTexture.cpp">
+    <ClCompile Include="Shader.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -65,7 +65,7 @@
     <ClInclude Include="stb_image.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="COpenGLTexture.h">
+    <ClInclude Include="Shader.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
